@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button [text]="getBackButtonText()" [routerLink]="['/']"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="pr">
+  <ion-item>
+    <ion-label>{{pr.name}}
+    <ion-label>Reps: </ion-label> <h2>{{pr.reps}}</h2>
+    <ion-label>Weight: </ion-label> <h2>{{pr.weight}} LBS / {{pr.weight * .45359237 }} KGS </h2><br>
+    <ion-note>{{pr.date}}</ion-note>
+    </ion-label>
+  </ion-item>
+</ion-content>

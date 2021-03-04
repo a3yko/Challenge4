@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add a PR</ion-title>    
+    <ion-buttons>
+      <ion-back-button [text]="getBackButtonText()" [routerLink]="['/']"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="createPR()" [formGroup]="prform">
+      <ion-item>
+        <ion-label>What kind of PR?</ion-label>
+          <ion-select placeholder="Select One" formControlName="name" name="prname">
+            <ion-select-option value="Back Squat">Back Squat</ion-select-option>
+            <ion-select-option value="Front Squat">Front Squat</ion-select-option>
+            <ion-select-option value="Snatch">Snatch</ion-select-option>
+            <ion-select-option value="Clean">Clean</ion-select-option>
+          </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Reps</ion-label>
+       <ion-select placeholder="Select One" formControlName="reps" name="repcnt">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+       </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Lift Weight:</ion-label>
+        <ion-input type="number" formControlName="weight" name="prweight"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Add PR</button>
+    </form>
+</ion-content>

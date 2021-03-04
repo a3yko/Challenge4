@@ -1,0 +1,5 @@
+<ion-item *ngIf="pr" [routerLink]="'/pr/' + pr.id" [detail]="false">
+  <div slot="start"></div>
+  <ion-label class="ion-float-left">{{ pr.name }}</ion-label>
+  <ion-label class="ion-float-right">{{ pr.date }}</ion-label>
+  </ion-item>
